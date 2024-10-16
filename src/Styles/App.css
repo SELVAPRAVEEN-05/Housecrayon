@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+* {
+  margin: 0;
+}
+
+.overall {
+  background-color: #f5f7fa;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.Sidebar {
+  height: 98%;
+  width: 65%;
+  padding-left: 25px;
+}
+
+.dashhead{
+  height: 7%;
+  display: flex;
+  background-color: #FFFFFF;
+  align-items: center;
+  padding: 0 2%;
+  justify-content: space-between;
+  width: 96%;
+}
+
+.Mainbody{
+  height: 100%;
+  width: 100%;
+}
+
+.leftarrow{
+  background-color: #E4E8EE;
+  border-radius: 20px;
+  color: #091B29;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3px;
+  width: 20px;
+}
+
+.leftdiv{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #071741;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Dashbody{
+  height: 89%;
+  background-color: #FFFFFF;
+  width: 98%;
+  box-shadow: 0px 0px 16px #00000014;
+  border-radius: 12px;
+  margin: 1%;
+}
+
+.Dashbody1{
+  height: 9%;
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  border-bottom: 1px solid #E4E8EE;
+  color: #5078E1;
+  font-size: 14px;
+}
+
+.Dashbody2{
+  height: 78%;
+  width: 98%;
+  padding: 1% 1% 0 1%;
+  display: flex;
+}
+
+.Dashbody3{
+  height: 11%;
+  width: 98%;
+  padding: 0 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Buttondash{
+  color: #091B29;
+  font-size: 14px;
+  border: 1px solid #E4E8EE;
+  background-color: transparent;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.gap{
+  gap: 10px;
+  display: flex;
+}
+
+.TomCruise{
+  height: 100%;
+  width: 32%;
+}
+
+.homedetail{
+  height: 100%;
+  width: 36%;
+}
+
+.payment{
+  height: 100%;
+  width: 32%;
+}
+
+.LeadDetails{
+  font-size: 14px;
+  color: #4E5A6B;
+  font-weight: bold;
+}
