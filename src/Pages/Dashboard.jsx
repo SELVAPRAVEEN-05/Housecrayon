@@ -37,7 +37,6 @@ function Dashboard() {
   };
 
   const properties = [
-    
     {
       name: "Jumeirah Estate",
       price: "$1,200",
@@ -47,8 +46,6 @@ function Dashboard() {
       baths: 2,
       type: "2BHK",
     },
-
-    
 
     {
       name: "Jumeirah Estate",
@@ -86,15 +83,15 @@ function Dashboard() {
   const gracePeriod = "90 Days (Beginning)";
 
   return (
-    <div className="Mainbody">
-      <div className="dashhead">
-        <div className="leftdiv">
-          <div className="leftarrow" style={{ fontSize: "1140px" }}>
+    <Box className="Mainbody">
+      <Box className="dashhead">
+        <Box className="leftdiv">
+          <Box className="leftarrow" style={{ fontSize: "1140px" }}>
             <MdOutlineKeyboardArrowLeft />
-          </div>
-          <div>Create Quotation To Existing Lead</div>
-        </div>
-        <div>
+          </Box>
+          <Box>Create Quotation To Existing Lead</Box>
+        </Box>
+        <Box>
           <Select
             placeholder="Casagrand"
             indicator={<KeyboardArrowDown />}
@@ -113,37 +110,37 @@ function Dashboard() {
             <Option value="fish">Casagrand</Option>
             <Option value="bird">Casagrand</Option>
           </Select>
-        </div>
-      </div>
-      <div className="Dashbody">
-        <div className="Dashbody1">
+        </Box>
+      </Box>
+      <Box className="Dashbody">
+        <Box className="Dashbody1">
           Add Contact&ensp; <FaChevronRight /> &ensp;Lead Details&ensp;
           <FaChevronRight /> &ensp;Preview and Create Lead&ensp;
           <FaChevronRight /> &ensp;Quotation Details&ensp; <FaChevronRight />
           &ensp;Preview and Create
-        </div>
-        <div className="Dashbody2">
-          <div className="TomCruise">
-            <div className="LeadDetails">Lead Details</div>
-            <div className="profilephoto">
-              <div style={{ height: "45px", width: "52px", padding: "0 2%" }}>
+        </Box>
+        <Box className="Dashbody2">
+          <Box className="TomCruise">
+            <Box className="LeadDetails">Lead Details</Box>
+            <Box className="profilephoto">
+              <Box style={{ height: "45px", width: "52px", padding: "0 2%" }}>
                 <img src={photo} style={{ height: "100%", width: "100%" }} />
-              </div>
-              <div className="dashprofil">
-                <div className="tom">Tom Cruise</div>
+              </Box>
+              <Box className="dashprofil">
+                <Box className="tom">Tom Cruise</Box>
 
-                <div className="s919090808012">
+                <Box className="s919090808012">
                   <Box>+91 9090808012</Box>
                   <Box className="dot">
                     <Box className="indot"></Box>
                   </Box>
                   <Box>Tomcruise2515@mail.com</Box>
-                </div>
-              </div>
-            </div>
-            <div className="line"></div>
-            <div className="g-quotation-details">
-              <div
+                </Box>
+              </Box>
+            </Box>
+            <Box className="line"></Box>
+            <Box className="g-quotation-details">
+              <Box
                 className="QuotationSummary"
                 style={{
                   margin: "0px",
@@ -152,156 +149,156 @@ function Dashboard() {
                 }}
               >
                 Quotation Details
-              </div>
-              <div className="g-details-row">
-                <div className="g-detail">
+              </Box>
+              <Box className="g-details-row">
+                <Box className="g-detail">
                   <label>Lease Start Date</label>
                   <p>{leaseStartDate}</p>
-                </div>
-                <div className="g-detail">
+                </Box>
+                <Box className="g-detail">
                   <label>Lease End Date</label>
                   <p>{leaseEndDate}</p>
-                </div>
-                <div className="g-detail">
+                </Box>
+                <Box className="g-detail">
                   <label>Rent Start Date</label>
                   <p>{rentStartDate}</p>
-                </div>
-              </div>
-              <div className="g-details-row">
-                <div className="g-detail">
+                </Box>
+              </Box>
+              <Box className="g-details-row">
+                <Box className="g-detail">
                   <label>Grace Period</label>
                   <p>{gracePeriod}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
 
-          <div className="homedetail">
-            <div
+          <Box className="homedetail">
+            <Box
               className="QuotationSummary"
               style={{ margin: "0px", marginBottom: "10px", fontSize: "14px" }}
             >
               Unit Details
-            </div>
-            <div className="card">
-              <div className="card-list">
+            </Box>
+            <Box className="card">
+              <Box className="card-list">
                 {properties.map((property, index) => (
-                  <div >
+                  <Box>
                     <Card key={index} sx={{ maxWidth: 200, padding: "10px" }}>
-                    <CardMedia component="img" height="100" image={photo1} />
-                    <Typography
-                      sx={{
-                        color: "#091B29",
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                        display: "flex",
-                        height: "30px",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                      component="div"
-                    >
-                      <Box>{property.name}</Box>
-                      <Box>{property.price}</Box>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#98A0AC",
-                        fontSize: "12px",
-                        display: "flex",
-                        height: "20px",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <Box>{property.location}</Box>
-                      <Box className="dot">
-                        <Box className="indot"></Box>
-                      </Box>
-                      <Box>{property.size}</Box>
-                    </Typography>
+                      <CardMedia component="img" height="100" image={photo1} />
+                      <Typography
+                        sx={{
+                          color: "#091B29",
+                          fontSize: "14px",
+                          fontWeight: "bold",
+                          display: "flex",
+                          height: "30px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                        component="div"
+                      >
+                        <Box>{property.name}</Box>
+                        <Box>{property.price}</Box>
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "12px",
+                          display: "flex",
+                          height: "20px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                      >
+                        <Box>{property.location}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box>{property.size}</Box>
+                      </Typography>
 
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#98A0AC",
-                        fontSize: "14px",
-                        display: "flex",
-                        height: "40px",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <Box sx={{ fontSize: "20px" }}>
-                        <GiPersonInBed />
-                      </Box>
-                      <Box>{property.beds}</Box>
-                      <Box className="dot">
-                        <Box className="indot"></Box>
-                      </Box>
-                      <Box sx={{ fontSize: "20px" }}>
-                        <PiBathtubLight />
-                      </Box>
-                      <Box>{property.baths}</Box>
-                      <Box className="dot">
-                        <Box className="indot"></Box>
-                      </Box>
-                      <Box sx={{ fontSize: "16px" }}>
-                        <GoHome />
-                      </Box>
-                      <Box>{property.type}</Box>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#98A0AC",
-                        fontSize: "12px",
-                        display: "flex",
-                        height: "30px",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: "100%",
-                      }}
-                    >
-                      <Box>
-                        <Dropdown>
-                          <MenuButton
-                            size="sm"
-                            color="#5078E1"
-                            sx={{ color: "#5078E1" }}
-                          >
-                            <TiPlus />
-                            &ensp; Customise
-                          </MenuButton>
-                          <Menu size="sm">
-                            <MenuItem>Add Pricing Component</MenuItem>
-                            <ListDivider />
-                            <MenuItem>Add Amenities</MenuItem>
-                            <ListDivider />
-                            <MenuItem>Add Utilities</MenuItem>
-                            <ListDivider />
-                            <MenuItem>Add Discount</MenuItem>
-                            <ListDivider />
-                            <MenuItem>Remove Component</MenuItem>
-                          </Menu>
-                        </Dropdown>
-                      </Box>
-                    </Typography>
-                  </Card>
-                  </div>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "14px",
+                          display: "flex",
+                          height: "40px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                      >
+                        <Box sx={{ fontSize: "20px" }}>
+                          <GiPersonInBed />
+                        </Box>
+                        <Box>{property.beds}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box sx={{ fontSize: "20px" }}>
+                          <PiBathtubLight />
+                        </Box>
+                        <Box>{property.baths}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box sx={{ fontSize: "16px" }}>
+                          <GoHome />
+                        </Box>
+                        <Box>{property.type}</Box>
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "12px",
+                          display: "flex",
+                          height: "30px",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "100%",
+                        }}
+                      >
+                        <Box>
+                          <Dropdown>
+                            <MenuButton
+                              size="sm"
+                              color="#5078E1"
+                              sx={{ color: "#5078E1" }}
+                            >
+                              <TiPlus />
+                              &ensp; Customise
+                            </MenuButton>
+                            <Menu size="sm">
+                              <MenuItem>Add Pricing Component</MenuItem>
+                              <ListDivider />
+                              <MenuItem>Add Amenities</MenuItem>
+                              <ListDivider />
+                              <MenuItem>Add Utilities</MenuItem>
+                              <ListDivider />
+                              <MenuItem>Add Discount</MenuItem>
+                              <ListDivider />
+                              <MenuItem>Remove Component</MenuItem>
+                            </Menu>
+                          </Dropdown>
+                        </Box>
+                      </Typography>
+                    </Card>
+                  </Box>
                 ))}
-              </div>
-            </div>
-          </div>
+              </Box>
+            </Box>
+          </Box>
 
-          <div className="payment">
-            <div className="QuotationSummary">Quotation Summary</div>
-            <div className="Ourways">
-              <div className="quotation-summary">
+          <Box className="payment">
+            <Box className="QuotationSummary">Quotation Summary</Box>
+            <Box className="Ourways">
+              <Box className="quotation-summary">
                 <table>
                   <thead>
                     <tr>
@@ -343,13 +340,13 @@ function Dashboard() {
                     </tr>
                   </tfoot>
                 </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="Dashbody3">
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+        <Box className="Dashbody3">
           <button className="Buttondash">Previous</button>
-          <div className="gap">
+          <Box className="gap">
             <button className="Buttondash">Cancel</button>
             <button
               className="Buttondash"
@@ -361,10 +358,10 @@ function Dashboard() {
             >
               Create Quotation
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
