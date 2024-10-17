@@ -9,7 +9,7 @@ function App() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleSidebar = () => {
-    setIsExpanded((prevState) => prevState);  //if ! is hear
+    setIsExpanded((prevState) => !prevState);  //if ! is hear
   };
 
   return (
