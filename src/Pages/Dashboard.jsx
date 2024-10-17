@@ -21,13 +21,12 @@ import ListDivider from "@mui/joy/ListDivider";
 import { TiPlus } from "react-icons/ti";
 import PrincingComponent from "../Components/Popups/Princing";
 import { useState } from "react";
-import AddUtility from "../Components/Addutils";
+import AddUtility from "../Components/Popups/Addutils";
+import Amenities from "../Components/Popups/Amenities";
 
 function Dashboard() {
-
-
   const [showPricingDialog, setShowPricingDialog] = useState(false);
-  const [showAmenities, setShowPricingDialoshowAmenities] = useState(false);
+  const [showAmenities, setshowAmenities] = useState(false);
   const [showUtilities, setShowUtilities] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [showRemove, setShowRemove] = useState(false);
@@ -41,11 +40,11 @@ function Dashboard() {
   };
 
   const handleOpen2 = () => {
-    setShowPricingDialog(true);
+    setshowAmenities(true);
   };
 
   const handleClose2 = () => {
-    setShowPricingDialog(false);
+    setshowAmenities(false);
   };
 
   const handleOpen3 = () => {
@@ -71,7 +70,6 @@ function Dashboard() {
   const handleClose5 = () => {
     setShowPricingDialog(false);
   };
-
 
   const data = {
     totalAmount: { description: "Total Amount", qty: 3, amount: 3600 },
@@ -122,7 +120,7 @@ function Dashboard() {
       baths: 2,
       type: "2BHK",
     },
-  ];  
+  ];
 
   const leaseStartDate = "30 Jan 22";
   const leaseEndDate = "30 Jan 23";
@@ -228,119 +226,121 @@ function Dashboard() {
               Unit Details
             </Box>
             <Box className="card">
-            <Box className="card-list">
-  {properties.map((property) => (
-    <Box key={property.id}>
-      <Card sx={{ maxWidth: 200, padding: "10px" }}>
-        <CardMedia component="img" height="100" image={photo1} />
-        <Typography
-          sx={{
-            color: "#091B29",
-            fontSize: "14px",
-            fontWeight: "bold",
-            display: "flex",
-            height: "30px",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-          component="div"
-        >
-          <Box>{property.name}</Box>
-          <Box>{property.price}</Box>
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: "#98A0AC",
-            fontSize: "12px",
-            display: "flex",
-            height: "20px",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <Box>{property.location}</Box>
-          <Box className="dot">
-            <Box className="indot"></Box>
-          </Box>
-          <Box>{property.size}</Box>
-        </Typography>
+              <Box className="card-list">
+                {properties.map((property) => (
+                  <Box key={property.id}>
+                    <Card sx={{ maxWidth: 200, padding: "10px" }}>
+                      <CardMedia component="img" height="100" image={photo1} />
+                      <Typography
+                        sx={{
+                          color: "#091B29",
+                          fontSize: "14px",
+                          fontWeight: "bold",
+                          display: "flex",
+                          height: "30px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                        component="div"
+                      >
+                        <Box>{property.name}</Box>
+                        <Box>{property.price}</Box>
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "12px",
+                          display: "flex",
+                          height: "20px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                      >
+                        <Box>{property.location}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box>{property.size}</Box>
+                      </Typography>
 
-        <Typography
-          variant="body2"
-          sx={{
-            color: "#98A0AC",
-            fontSize: "14px",
-            display: "flex",
-            height: "40px",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <Box sx={{ fontSize: "20px" }}>
-            <GiPersonInBed />
-          </Box>
-          <Box>{property.beds}</Box>
-          <Box className="dot">
-            <Box className="indot"></Box>
-          </Box>
-          <Box sx={{ fontSize: "20px" }}>
-            <PiBathtubLight />
-          </Box>
-          <Box>{property.baths}</Box>
-          <Box className="dot">
-            <Box className="indot"></Box>
-          </Box>
-          <Box sx={{ fontSize: "16px" }}>
-            <GoHome />
-          </Box>
-          <Box>{property.type}</Box>
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: "#98A0AC",
-            fontSize: "12px",
-            display: "flex",
-            height: "30px",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-          }}
-        >
-          <Box>
-            <Dropdown>
-              <MenuButton
-                size="sm"
-                color="#5078E1"
-                sx={{ color: "#5078E1" }}
-              >
-                <TiPlus />
-                &ensp; Customise
-              </MenuButton>
-              <Menu size="sm">
-                <MenuItem onClick={handleOpen1}>
-                      Add Pricing Component
-                    </MenuItem>
-                <ListDivider />
-                <MenuItem>Add Amenities</MenuItem>
-                <ListDivider />
-                <MenuItem onClick={handleOpen3}>Add Utilities</MenuItem>
-                <ListDivider />
-                <MenuItem>Add Discount</MenuItem>
-                <ListDivider />
-                <MenuItem>Remove Component</MenuItem>
-              </Menu>
-            </Dropdown>
-          </Box>
-        </Typography>
-      </Card>
-    </Box>
-  ))}
-</Box>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "14px",
+                          display: "flex",
+                          height: "40px",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                      >
+                        <Box sx={{ fontSize: "20px" }}>
+                          <GiPersonInBed />
+                        </Box>
+                        <Box>{property.beds}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box sx={{ fontSize: "20px" }}>
+                          <PiBathtubLight />
+                        </Box>
+                        <Box>{property.baths}</Box>
+                        <Box className="dot">
+                          <Box className="indot"></Box>
+                        </Box>
+                        <Box sx={{ fontSize: "16px" }}>
+                          <GoHome />
+                        </Box>
+                        <Box>{property.type}</Box>
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#98A0AC",
+                          fontSize: "12px",
+                          display: "flex",
+                          height: "30px",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "100%",
+                        }}
+                      >
+                        <Box>
+                          <Dropdown>
+                            <MenuButton
+                              size="sm"
+                              color="#5078E1"
+                              sx={{ color: "#5078E1" }}
+                            >
+                              <TiPlus />
+                              &ensp; Customise
+                            </MenuButton>
+                            <Menu size="sm">
+                              <MenuItem onClick={handleOpen1}>
+                                Add Pricing Component
+                              </MenuItem>
+                              <ListDivider/>
+                              <MenuItem  onClick={handleOpen2}>Add Amenities</MenuItem>
+                              <ListDivider />
+                              <MenuItem onClick={handleOpen3}>
+                                Add Utilities
+                              </MenuItem>
+                              <ListDivider />
+                              <MenuItem>Add Discount</MenuItem>
+                              <ListDivider />
+                              <MenuItem>Remove Component</MenuItem>
+                            </Menu>
+                          </Dropdown>
+                        </Box>
+                      </Typography>
+                    </Card>
+                  </Box>
+                ))}
+              </Box>
             </Box>
           </Box>
 
@@ -410,12 +410,9 @@ function Dashboard() {
           </Box>
         </Box>
       </Box>
-      {showPricingDialog && (
-        <PrincingComponent setPrincing={handleClose1} />
-      )}
-      {showUtilities && (
-        <AddUtility setPrincing={handleClose3} />
-      )}
+      {showPricingDialog && <PrincingComponent setPrincing={handleClose1} />}
+      {showUtilities && <AddUtility setPrincing={handleClose3} />}
+      {showAmenities && <Amenities setPrincing={handleClose2} />}
     </Box>
   );
 }
