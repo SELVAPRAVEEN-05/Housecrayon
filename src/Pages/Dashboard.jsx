@@ -2,18 +2,13 @@ import * as React from "react";
 import Select, { selectClasses } from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
-import { SlArrowLeft } from "react-icons/sl";
 import { FaChevronRight } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import photo from "../assets/image.png";
 import photo1 from "../assets/house.jpeg";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardActions from "@mui/material/CardActions"; // Import CardActions
-import Button from "@mui/material/Button";
 import { Box } from "@mui/material";
 import { GiPersonInBed } from "react-icons/gi";
 import { PiBathtubLight } from "react-icons/pi";
@@ -23,11 +18,61 @@ import Menu from "@mui/joy/Menu";
 import MenuItem from "@mui/joy/MenuItem";
 import Dropdown from "@mui/joy/Dropdown";
 import ListDivider from "@mui/joy/ListDivider";
-import ListItemDecorator from "@mui/joy/ListItemDecorator";
-import Check from "@mui/icons-material/Check";
 import { TiPlus } from "react-icons/ti";
+import PrincingComponent from "../Components/Popups/Princing";
+import { useState } from "react";
+import AddUtility from "../Components/Addutils";
 
 function Dashboard() {
+
+
+  const [showPricingDialog, setShowPricingDialog] = useState(false);
+  const [showAmenities, setShowPricingDialoshowAmenities] = useState(false);
+  const [showUtilities, setShowUtilities] = useState(false);
+  const [showDiscount, setShowDiscount] = useState(false);
+  const [showRemove, setShowRemove] = useState(false);
+
+  const handleOpen1 = () => {
+    setShowPricingDialog(true);
+  };
+
+  const handleClose1 = () => {
+    setShowPricingDialog(false);
+  };
+
+  const handleOpen2 = () => {
+    setShowPricingDialog(true);
+  };
+
+  const handleClose2 = () => {
+    setShowPricingDialog(false);
+  };
+
+  const handleOpen3 = () => {
+    setShowUtilities(true);
+  };
+
+  const handleClose3 = () => {
+    setShowUtilities(false);
+  };
+
+  const handleOpen4 = () => {
+    setShowPricingDialog(true);
+  };
+
+  const handleClose4 = () => {
+    setShowPricingDialog(false);
+  };
+
+  const handleOpen5 = () => {
+    setShowPricingDialog(true);
+  };
+
+  const handleClose5 = () => {
+    setShowPricingDialog(false);
+  };
+
+
   const data = {
     totalAmount: { description: "Total Amount", qty: 3, amount: 3600 },
     discount: { description: "Total Discount", percentage: 10, amount: -100 },
@@ -38,26 +83,7 @@ function Dashboard() {
 
   const properties = [
     {
-      name: "Jumeirah Estate",
-      price: "$1,200",
-      location: "Jumeirah Golf Estate",
-      size: "2000 Sq.Ft",
-      beds: 2,
-      baths: 2,
-      type: "2BHK",
-    },
-
-    {
-      name: "Jumeirah Estate",
-      price: "$1,200",
-      location: "Jumeirah Golf Estate",
-      size: "2000 Sq.Ft",
-      beds: 2,
-      baths: 2,
-      type: "2BHK",
-    },
-
-    {
+      id: 1,
       name: "Jumeirah Estate",
       price: "$1,200",
       location: "Jumeirah Golf Estate",
@@ -67,15 +93,36 @@ function Dashboard() {
       type: "2BHK",
     },
     {
-      name: "Jumeirah Estate",
-      price: "$1,200",
-      location: "Jumeirah Golf Estate",
-      size: "2000 Sq.Ft",
+      id: 2,
+      name: "Palm Jumeirah Villa",
+      price: "$3,500",
+      location: "Palm Jumeirah",
+      size: "5000 Sq.Ft",
+      beds: 4,
+      baths: 4,
+      type: "4BHK",
+    },
+    {
+      id: 3,
+      name: "Dubai Marina ",
+      price: "$6,000",
+      location: "Dubai Marina",
+      size: "7000 Sq.Ft",
+      beds: 5,
+      baths: 6,
+      type: "5BHK",
+    },
+    {
+      id: 4,
+      name: "Downtown Apartment",
+      price: "$2,200",
+      location: "Downtown Dubai",
+      size: "1800 Sq.Ft",
       beds: 2,
       baths: 2,
       type: "2BHK",
     },
-  ];
+  ];  
 
   const leaseStartDate = "30 Jan 22";
   const leaseEndDate = "30 Jan 23";
@@ -181,117 +228,119 @@ function Dashboard() {
               Unit Details
             </Box>
             <Box className="card">
-              <Box className="card-list">
-                {properties.map((property, index) => (
-                  <Box>
-                    <Card key={index} sx={{ maxWidth: 200, padding: "10px" }}>
-                      <CardMedia component="img" height="100" image={photo1} />
-                      <Typography
-                        sx={{
-                          color: "#091B29",
-                          fontSize: "14px",
-                          fontWeight: "bold",
-                          display: "flex",
-                          height: "30px",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          width: "100%",
-                        }}
-                        component="div"
-                      >
-                        <Box>{property.name}</Box>
-                        <Box>{property.price}</Box>
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#98A0AC",
-                          fontSize: "12px",
-                          display: "flex",
-                          height: "20px",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          width: "100%",
-                        }}
-                      >
-                        <Box>{property.location}</Box>
-                        <Box className="dot">
-                          <Box className="indot"></Box>
-                        </Box>
-                        <Box>{property.size}</Box>
-                      </Typography>
+            <Box className="card-list">
+  {properties.map((property) => (
+    <Box key={property.id}>
+      <Card sx={{ maxWidth: 200, padding: "10px" }}>
+        <CardMedia component="img" height="100" image={photo1} />
+        <Typography
+          sx={{
+            color: "#091B29",
+            fontSize: "14px",
+            fontWeight: "bold",
+            display: "flex",
+            height: "30px",
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+          component="div"
+        >
+          <Box>{property.name}</Box>
+          <Box>{property.price}</Box>
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#98A0AC",
+            fontSize: "12px",
+            display: "flex",
+            height: "20px",
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+        >
+          <Box>{property.location}</Box>
+          <Box className="dot">
+            <Box className="indot"></Box>
+          </Box>
+          <Box>{property.size}</Box>
+        </Typography>
 
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#98A0AC",
-                          fontSize: "14px",
-                          display: "flex",
-                          height: "40px",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          width: "100%",
-                        }}
-                      >
-                        <Box sx={{ fontSize: "20px" }}>
-                          <GiPersonInBed />
-                        </Box>
-                        <Box>{property.beds}</Box>
-                        <Box className="dot">
-                          <Box className="indot"></Box>
-                        </Box>
-                        <Box sx={{ fontSize: "20px" }}>
-                          <PiBathtubLight />
-                        </Box>
-                        <Box>{property.baths}</Box>
-                        <Box className="dot">
-                          <Box className="indot"></Box>
-                        </Box>
-                        <Box sx={{ fontSize: "16px" }}>
-                          <GoHome />
-                        </Box>
-                        <Box>{property.type}</Box>
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#98A0AC",
-                          fontSize: "12px",
-                          display: "flex",
-                          height: "30px",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          width: "100%",
-                        }}
-                      >
-                        <Box>
-                          <Dropdown>
-                            <MenuButton
-                              size="sm"
-                              color="#5078E1"
-                              sx={{ color: "#5078E1" }}
-                            >
-                              <TiPlus />
-                              &ensp; Customise
-                            </MenuButton>
-                            <Menu size="sm">
-                              <MenuItem>Add Pricing Component</MenuItem>
-                              <ListDivider />
-                              <MenuItem>Add Amenities</MenuItem>
-                              <ListDivider />
-                              <MenuItem>Add Utilities</MenuItem>
-                              <ListDivider />
-                              <MenuItem>Add Discount</MenuItem>
-                              <ListDivider />
-                              <MenuItem>Remove Component</MenuItem>
-                            </Menu>
-                          </Dropdown>
-                        </Box>
-                      </Typography>
-                    </Card>
-                  </Box>
-                ))}
-              </Box>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#98A0AC",
+            fontSize: "14px",
+            display: "flex",
+            height: "40px",
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+        >
+          <Box sx={{ fontSize: "20px" }}>
+            <GiPersonInBed />
+          </Box>
+          <Box>{property.beds}</Box>
+          <Box className="dot">
+            <Box className="indot"></Box>
+          </Box>
+          <Box sx={{ fontSize: "20px" }}>
+            <PiBathtubLight />
+          </Box>
+          <Box>{property.baths}</Box>
+          <Box className="dot">
+            <Box className="indot"></Box>
+          </Box>
+          <Box sx={{ fontSize: "16px" }}>
+            <GoHome />
+          </Box>
+          <Box>{property.type}</Box>
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#98A0AC",
+            fontSize: "12px",
+            display: "flex",
+            height: "30px",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Box>
+            <Dropdown>
+              <MenuButton
+                size="sm"
+                color="#5078E1"
+                sx={{ color: "#5078E1" }}
+              >
+                <TiPlus />
+                &ensp; Customise
+              </MenuButton>
+              <Menu size="sm">
+                <MenuItem onClick={handleOpen1}>
+                      Add Pricing Component
+                    </MenuItem>
+                <ListDivider />
+                <MenuItem>Add Amenities</MenuItem>
+                <ListDivider />
+                <MenuItem onClick={handleOpen3}>Add Utilities</MenuItem>
+                <ListDivider />
+                <MenuItem>Add Discount</MenuItem>
+                <ListDivider />
+                <MenuItem>Remove Component</MenuItem>
+              </Menu>
+            </Dropdown>
+          </Box>
+        </Typography>
+      </Card>
+    </Box>
+  ))}
+</Box>
             </Box>
           </Box>
 
@@ -361,6 +410,12 @@ function Dashboard() {
           </Box>
         </Box>
       </Box>
+      {showPricingDialog && (
+        <PrincingComponent setPrincing={handleClose1} />
+      )}
+      {showUtilities && (
+        <AddUtility setPrincing={handleClose3} />
+      )}
     </Box>
   );
 }

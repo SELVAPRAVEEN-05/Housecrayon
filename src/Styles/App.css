@@ -260,7 +260,7 @@
   grid-template-columns:auto auto;
   height: 100%;
   overflow-y: scroll;
-  gap: 10px 0;
+  gap: 20px 0;
   scrollbar-width: none;
 }
 
@@ -275,3 +275,80 @@
   border-radius: 10px;
   background-color: #CED3DD;
 }
+
+
+
+
+.pricing-table {
+  width: 92%;
+  font-family: "Nunito", sans-serif;
+  padding: 3% 4%;
+  height: 94%;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  height: 70px;
+  padding: 0 10px;
+  color: #091B29;
+  font-size: 14px;
+}
+
+.pricing-item.open {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.pricing-label {
+  display: flex;
+  align-items: center;
+}
+
+.item-number {
+  font-size: 12px;
+  background-color: #7da2ff;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 5px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+/* Color Classes */
+.primary {
+  background-color: #FEEAEA80;
+}
+
+.secondary {
+  background-color: #EDE4FE80;
+}
+
+.one-time-charges {
+  background-color: #DBF0F180;
+}
+
+.refundables {
+  background-color: #E4EDFF80;
+}
+
+.inventory-item {
+  background-color: #FFFAD880;
+}
+
+.parking-slot {
+  background-color: #FEEAEA80;
+}
+
