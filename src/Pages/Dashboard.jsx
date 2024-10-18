@@ -25,6 +25,7 @@ import AddUtility from "../Components/Popups/Addutils";
 import Amenities from "../Components/Popups/Amenities";
 import Discount from "../Components/Popups/Discount";
 import Remove from "../Components/Popups/Remove";
+import { FaRegTrashCan } from "react-icons/fa6";
 
 function Dashboard() {
   const [showPricingDialog, setShowPricingDialog] = useState(false);
@@ -232,7 +233,29 @@ function Dashboard() {
                 {properties.map((property) => (
                   <Box key={property.id}>
                     <Card sx={{ maxWidth: 200, padding: "10px" }}>
-                      <CardMedia component="img" height="100" image={photo1} />
+                      <Box sx={{ position: "relative" }}>
+                        <CardMedia
+                          component="img"
+                          height="100"
+                          image={photo1}
+                        />
+                        <Box
+                          sx={{
+                            position: "absolute",
+                            top: "0",
+                            right: "0",
+                            margin: "10px",
+                            backgroundColor:'#F5F7FA',
+                            display:'flex',
+                            padding:'6px',
+                            borderRadius:'50px',
+                            color:'#FF4B4B'
+                          }}
+                        >
+                          <FaRegTrashCan />
+                        </Box>
+                      </Box>
+
                       <Typography
                         sx={{
                           color: "#091B29",
@@ -247,7 +270,7 @@ function Dashboard() {
                         component="div"
                       >
                         <Box>{property.name}</Box>
-                        <Box>{property.price}</Box>
+                        <Box sx={{color:'#FF9340'}}>{property.price}</Box>
                       </Typography>
                       <Typography
                         variant="body2"
@@ -325,16 +348,22 @@ function Dashboard() {
                               <MenuItem onClick={handleOpen1}>
                                 Add Pricing Component
                               </MenuItem>
-                              <ListDivider/>
-                              <MenuItem  onClick={handleOpen2}>Add Amenities</MenuItem>
+                              <ListDivider />
+                              <MenuItem onClick={handleOpen2}>
+                                Add Amenities
+                              </MenuItem>
                               <ListDivider />
                               <MenuItem onClick={handleOpen3}>
                                 Add Utilities
                               </MenuItem>
                               <ListDivider />
-                              <MenuItem onClick={handleOpen4}>Add Discount</MenuItem>
+                              <MenuItem onClick={handleOpen4}>
+                                Add Discount
+                              </MenuItem>
                               <ListDivider />
-                              <MenuItem onClick={handleOpen5}>Remove Component</MenuItem>
+                              <MenuItem onClick={handleOpen5}>
+                                Remove Component
+                              </MenuItem>
                             </Menu>
                           </Dropdown>
                         </Box>
