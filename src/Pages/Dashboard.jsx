@@ -24,6 +24,7 @@ import { useState } from "react";
 import AddUtility from "../Components/Popups/Addutils";
 import Amenities from "../Components/Popups/Amenities";
 import Discount from "../Components/Popups/Discount";
+import Remove from "../Components/Popups/Remove";
 
 function Dashboard() {
   const [showPricingDialog, setShowPricingDialog] = useState(false);
@@ -65,11 +66,11 @@ function Dashboard() {
   };
 
   const handleOpen5 = () => {
-    setShowPricingDialog(true);
+    setShowRemove(true);
   };
 
   const handleClose5 = () => {
-    setShowPricingDialog(false);
+    setShowRemove(false);
   };
 
   const data = {
@@ -333,7 +334,7 @@ function Dashboard() {
                               <ListDivider />
                               <MenuItem onClick={handleOpen4}>Add Discount</MenuItem>
                               <ListDivider />
-                              <MenuItem>Remove Component</MenuItem>
+                              <MenuItem onClick={handleOpen5}>Remove Component</MenuItem>
                             </Menu>
                           </Dropdown>
                         </Box>
@@ -415,6 +416,7 @@ function Dashboard() {
       {showUtilities && <AddUtility setPrincing={handleClose3} />}
       {showAmenities && <Amenities setPrincing={handleClose2} />}
       {showDiscount && <Discount setPrincing={handleClose4} />}
+      {showRemove && <Remove setPrincing={handleClose5} />}
     </Box>
   );
 }

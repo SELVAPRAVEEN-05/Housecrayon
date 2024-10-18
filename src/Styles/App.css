@@ -345,7 +345,14 @@
 .parking-slot {
   background-color: #feeaea80;
 }
-
+.discountleftmain{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  gap: 10px 0;
+}
 .H-searchbar {
   color: #ced3dd;
   height: 100%;
@@ -360,12 +367,115 @@
   color: #ced3dd;
 }
 
+
+.leftimg2{
+  display: flex; 
+  width: 90%; 
+  height: 100%;  
+  gap: 0.5rem;
+}
+.leftimg{
+  width: 50%;
+  gap: 1rem;
+}
+
+
 .mainover {
   height: 96%;
   width: 92%;
   padding: 2% 4%;
   font-family: "Nunito", sans-serif;
 }
+
+.disbody{
+  height: 70%;
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+}
+
+
+.discount{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+
+  align-items: center;
+}
+.disheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 96%;   
+}
+.distitle{
+  color: #091B29;
+  font-size: 16px;
+  font-weight: 600;
+}
+.dishr{
+  width: 100%;
+}
+
+.discountimg{
+  height: 30%;
+  display: flex;
+}
+
+.discountfirimg{
+  height: 100%;
+  width: 50%; 
+}
+
+.discountall{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.dicright{
+  display: flex;
+  height: 600px;
+  width:  100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.namedis{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  gap: 10px;
+}
+.disname{
+  color: #091B29;
+  font-weight: 600;
+  font-size: 16px;
+}
+.disstatus{
+  color: #98A0AC;
+  font-size: 12px;
+  padding: 1% 2% 1% 2%;
+  background-color: #F5F7FA;
+  border-radius: 4px;
+}
+.dissubname{
+  color: #4E5A6B;
+  font-size: 14px;
+}
+
+.img-name{
+  width: 47%;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .search-icon {
   position: absolute;
@@ -460,6 +570,41 @@
   align-items: center;
 }
 
+.amenity{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #4E5A6B;
+  font-weight: 550;
+}
+
+.methe{
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 78%;
+}
+
+.namerow{
+  color: #4E5A6B;
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.leftpricontainer{
+  height: 95%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.pricesle{
+  font-size: 14px;
+  color: #091B29;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 .H-profile-se {
   display: flex;
   height: 100%;
@@ -472,4 +617,99 @@
   height: 35px;
   border-radius: 50px;
   overflow: hidden;
+}
+
+
+.total{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #091B29;
+  margin-bottom: 10px;
+  font-weight: 600;
+  background-color: #E4E8EE;
+  border-radius: 4px;
+  padding: 3%;
+}
+
+
+.apdis{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5078E1;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 3% ;
+}
+
+.quantities{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  font-size: 14px;
+  color: #CED3DD;
+}
+
+.naval{
+  color: #4E5A6B;
+}
+
+.book{
+  display: flex;
+  width: 97%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconbook{
+  display: flex;
+  gap: 7px;
+  font-size: 14px;
+  color: #091B29;
+}
+.view{
+  font-size: 14px;
+  color: #5078E1;
+}
+
+.disprices{
+  width: 47%;
+  height: 93%;
+  background-color: #F8F9FB;
+  border-radius: 16px;
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bill-discount{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.amature{
+  border: 1px solid #E4E8EE;
+  border-radius: 4px;
+  display: flex;
+  height: 20px;
+  width: 90px;
+  padding: 0 10px;
+  gap: 20px;
+  align-items: center;
+}
+
+.trashbin{
+  color: rgb(245, 63, 63);
+  margin-left: 30px;
+  padding: 5px 5px 3px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: rgb(255, 214, 214);
 }

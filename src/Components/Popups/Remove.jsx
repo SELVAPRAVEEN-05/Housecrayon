@@ -11,12 +11,13 @@ import { RiBook2Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import "../../Styles/App.css";
 import phota from "../../assets/house.jpeg";
+import { FaRegTrashCan } from "react-icons/fa6";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Discount({ setPrincing }) {
+export default function Remove({ setPrincing }) {
   const [open, setOpen] = useState(true);
 
   const handleClose = () => {
@@ -28,44 +29,30 @@ export default function Discount({ setPrincing }) {
     {
       billName: "Bill Name Here",
       price: "$1,000",
-      discountAmount: "100,000",
-      currency: "ADE",
     },
     {
       billName: "Another Bill",
       price: "$1,500",
-      discountAmount: "200,000",
-      currency: "ADE",
     },
     {
       billName: "Third Bill",
       price: "$1,200",
-      discountAmount: "50,000",
-      currency: "ADE",
     },
     {
       billName: "Fourth Bill",
       price: "$2,000",
-      discountAmount: "150,000",
-      currency: "ADE",
     },
     {
       billName: "Fifth Bill",
       price: "$2,500",
-      discountAmount: "120,000",
-      currency: "ADE",
     },
     {
       billName: "Sixth Bill",
       price: "$3,000",
-      discountAmount: "80,000",
-      currency: "ADE",
     },
     {
       billName: "Another Bill",
       price: "$1,500",
-      discountAmount: "200,000",
-      currency: "ADE",
     },
   ];
 
@@ -93,7 +80,7 @@ export default function Discount({ setPrincing }) {
       <DialogContent>
         <Box className="discount">
           <Box className="disheader">
-            <Box className="distitle">Add Discount To Unit</Box>
+            <Box className="distitle">Remove Component</Box>
             <RxCross1 onClick={handleClose} />
           </Box>
           <Divider className="dishr" />
@@ -159,19 +146,10 @@ export default function Discount({ setPrincing }) {
                 <Box className="pricesle">UNIT PRICE DETAIL</Box>
                 <Box className="methe">
                   {billDetails.map((detail, index) => (
-                    <Box sx={{ marginTop: "10px" }} key={index}>
-                      <Box className="namerow">
+                    <Box sx={{ marginTop: "15px" }} key={index}>
+                      <Box className="namerow" sx={{marginBottom:'15px'}}>
                         <Box>{detail.billName}</Box>
-                        <Box>{detail.price}</Box>
-                      </Box>
-                      <Box className="namerow" sx={{ color: "#98A0AC" }}>
-                        <Box>Discount</Box>
-                        <Box className="amature">
-                          <Box sx={{ fontSize: "12px" }}>
-                            {detail.discountAmount}
-                          </Box>
-                          <Box>{detail.currency}</Box>
-                        </Box>
+                        <Box>{detail.price} <span className="trashbin"><FaRegTrashCan /></span> </Box>
                       </Box>
                       <Divider orientation="horizontal" />
                     </Box>
