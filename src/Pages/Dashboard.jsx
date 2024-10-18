@@ -23,6 +23,7 @@ import PrincingComponent from "../Components/Popups/Princing";
 import { useState } from "react";
 import AddUtility from "../Components/Popups/Addutils";
 import Amenities from "../Components/Popups/Amenities";
+import Discount from "../Components/Popups/Discount";
 
 function Dashboard() {
   const [showPricingDialog, setShowPricingDialog] = useState(false);
@@ -56,11 +57,11 @@ function Dashboard() {
   };
 
   const handleOpen4 = () => {
-    setShowPricingDialog(true);
+    setShowDiscount(true);
   };
 
   const handleClose4 = () => {
-    setShowPricingDialog(false);
+    setShowDiscount(false);
   };
 
   const handleOpen5 = () => {
@@ -330,7 +331,7 @@ function Dashboard() {
                                 Add Utilities
                               </MenuItem>
                               <ListDivider />
-                              <MenuItem>Add Discount</MenuItem>
+                              <MenuItem onClick={handleOpen4}>Add Discount</MenuItem>
                               <ListDivider />
                               <MenuItem>Remove Component</MenuItem>
                             </Menu>
@@ -413,6 +414,7 @@ function Dashboard() {
       {showPricingDialog && <PrincingComponent setPrincing={handleClose1} />}
       {showUtilities && <AddUtility setPrincing={handleClose3} />}
       {showAmenities && <Amenities setPrincing={handleClose2} />}
+      {showDiscount && <Discount setPrincing={handleClose4} />}
     </Box>
   );
 }
