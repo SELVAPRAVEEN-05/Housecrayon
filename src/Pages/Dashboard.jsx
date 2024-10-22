@@ -93,6 +93,8 @@ function Dashboard() {
       baths: 2,
       type: "2BHK",
     },
+    
+    
     {
       id: 2,
       name: "Palm Jumeirah Villa",
@@ -123,12 +125,9 @@ function Dashboard() {
       baths: 2,
       type: "2BHK",
     },
+    
+    
   ];
-
-  const leaseStartDate = "30 Jan 22";
-  const leaseEndDate = "30 Jan 23";
-  const rentStartDate = "30 Jan 23";
-  const gracePeriod = "90 Days (Beginning)";
 
   return (
     <Box className="Mainbody">
@@ -172,10 +171,10 @@ function Dashboard() {
             <Box className="LeadDetails">Lead Details</Box>
             <Box className="profilephoto">
               <Box style={{ height: "45px", width: "52px", padding: "0 2%" }}>
-                <img src={photo} style={{ height: "100%", width: "100%" }} />
+                <img src={photo} style={{ height: "100%", width: "100%" , borderRadius:'5px' }} />
               </Box>
               <Box className="dashprofil">
-                <Box className="tom">Tom Cruise</Box>
+                <Box className="tom">Tom Cruise <span className="Prospect">Prospect</span></Box>
 
                 <Box className="s919090808012">
                   <Box>+91 9090808012</Box>
@@ -201,21 +200,21 @@ function Dashboard() {
               <Box className="g-details-row">
                 <Box className="g-detail">
                   <label>Lease Start Date</label>
-                  <p>{leaseStartDate}</p>
+                  <Box className="bocs">30 Jan 22</Box>
                 </Box>
                 <Box className="g-detail">
                   <label>Lease End Date</label>
-                  <p>{leaseEndDate}</p>
+                  <Box className="bocs">30 Jan 23</Box>
                 </Box>
                 <Box className="g-detail">
                   <label>Rent Start Date</label>
-                  <p>{rentStartDate}</p>
+                  <Box className="bocs">30 Jan 23</Box>
                 </Box>
               </Box>
               <Box className="g-details-row">
                 <Box className="g-detail">
                   <label>Grace Period</label>
-                  <p>{gracePeriod}</p>
+                  <Box className="bocs">90 Days <span style={{color:'#98a0ac'}}>(Beginning)</span></Box>
                 </Box>
               </Box>
             </Box>
@@ -231,8 +230,8 @@ function Dashboard() {
             <Box className="card">
               <Box className="card-list">
                 {properties.map((property) => (
-                  <Box key={property.id}>
-                    <Card sx={{ maxWidth: 200, padding: "10px" }}>
+                  <Box className="cardo" key={property.id}>
+                    <Card sx={{  padding: "10px" }}>
                       <Box sx={{ position: "relative" }}>
                         <CardMedia
                           component="img"
@@ -267,13 +266,11 @@ function Dashboard() {
                           justifyContent: "space-between",
                           width: "100%",
                         }}
-                        component="div"
                       >
                         <Box>{property.name}</Box>
                         <Box sx={{color:'#FF9340'}}>{property.price}</Box>
                       </Typography>
                       <Typography
-                        variant="body2"
                         sx={{
                           color: "#98A0AC",
                           fontSize: "12px",
@@ -391,22 +388,22 @@ function Dashboard() {
                     <tr>
                       <td>{data.totalAmount.description}</td>
                       <td>{data.totalAmount.qty}</td>
-                      <td>${data.totalAmount.amount.toFixed(2)}</td>
+                      <td style={{color:'#091B29',fontSize:'14px',fontWeight:'bold'}}>${data.totalAmount.amount.toFixed(2)}</td>
                     </tr>
                     <tr>
                       <td>{data.discount.description}</td>
                       <td>{data.discount.percentage}%</td>
-                      <td>- ${Math.abs(data.discount.amount).toFixed(2)}</td>
+                      <td >- ${Math.abs(data.discount.amount).toFixed(2)}</td>
                     </tr>
                     <tr>
                       <td>{data.refundable.description}</td>
                       <td>{data.refundable.percentage}%</td>
-                      <td>${data.refundable.amount.toFixed(2)}</td>
+                      <td style={{color:'#091B29',fontSize:'14px',fontWeight:'bold'}}>${data.refundable.amount.toFixed(2)}</td>
                     </tr>
                     <tr>
                       <td>{data.tax.description}</td>
                       <td>{data.tax.percentage}%</td>
-                      <td>${data.tax.amount.toFixed(2)}</td>
+                      <td style={{color:'#091B29',fontSize:'14px',fontWeight:'bold'}}>${data.tax.amount.toFixed(2)}</td>
                     </tr>
                   </tbody>
                   <tfoot>
