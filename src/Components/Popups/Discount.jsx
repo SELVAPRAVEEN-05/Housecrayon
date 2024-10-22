@@ -4,13 +4,9 @@ import DialogContent from "@mui/material/DialogContent";
 import Slide from "@mui/material/Slide";
 import { useState } from "react";
 import { Box, Divider } from "@mui/material";
-import { BiBed } from "react-icons/bi"; // Import BiBed icon
-import { PiBathtubLight, PiSquareHalfBottomLight } from "react-icons/pi"; // Ensure you import these as well
-import { GoHome } from "react-icons/go";
-import { RiBook2Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import "../../Styles/App.css";
-import phota from "../../assets/house.jpeg";
+import Houseimg from "./Houseimg";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -98,62 +94,7 @@ export default function Discount({ setPrincing }) {
           </Box>
           <Divider className="dishr" />
           <Box className="dicright">
-            <Box className="img-name">
-              <Box className="discountimg">
-                <Box className="discountfirimg">
-                  <img src={phota} className="discountall" />
-                </Box>
-                <Box className="discountleftmain">
-                  <Box className="leftimg2">
-                    <Box className="leftimg">
-                      <img src={phota} className="discountall" />
-                    </Box>
-                    <Box className="leftimg">
-                      <img src={phota} className="discountall" />
-                    </Box>
-                  </Box>
-                  <Box className="leftimg2">
-                    <Box className="leftimg">
-                      <img src={phota} className="discountall" />
-                    </Box>
-                    <Box className="leftimg">
-                      <img src={phota} className="discountall" />
-                    </Box>
-                  </Box>
-                </Box>
-              </Box>
-              <Box className="disbody">
-                <Box className="namedis">
-                  <Box className="disname">Jumeirah Estate</Box>
-                  <Box className="disstatus">UNT-1234</Box>
-                </Box>
-                <Box className="dissubname">
-                  Rubix Apartment, K Tower, Floor 1
-                </Box>
-                <Box className="quantities">
-                  <BiBed />
-                  <Box className="naval">2</Box>
-
-                  <PiBathtubLight />
-                  <Box className="naval">2</Box>
-
-                  <GoHome />
-                  <Box className="naval">3BHK</Box>
-
-                  <PiSquareHalfBottomLight />
-                  <Box className="naval">2000</Box>
-                  <Box>Sq.Ft</Box>
-                </Box>
-                <Divider />
-                <Box className="book">
-                  <Box className="iconbook">
-                    <RiBook2Line />
-                    <Box>Handbook</Box>
-                  </Box>
-                  <Box className="view">View / Download</Box>
-                </Box>
-              </Box>
-            </Box>
+            <Houseimg />
             <Box className="disprices">
               <Box className="leftpricontainer">
                 <Box className="pricesle">UNIT PRICE DETAIL</Box>

@@ -66,8 +66,8 @@ function Primary() {
                   },
                 }}
               >
-                <MenuItem value="" disabled>
-                  Pricing Component
+                <MenuItem  value="" disabled>
+                  <Box sx={{color:'#091B29'}}>Pricing Component</Box>
                 </MenuItem>
                 <MenuItem value={10}>GST 1</MenuItem>
                 <MenuItem value={20}>GST 2</MenuItem>

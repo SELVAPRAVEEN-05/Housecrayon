@@ -5,80 +5,76 @@ import Slide from "@mui/material/Slide";
 import { useState } from "react";
 import Switch from "@mui/joy/Switch";
 import Button from "@mui/material/Button";
-import Divider from "@mui/material/Divider";
 import { Box } from "@mui/material";
-import { HiSparkles } from "react-icons/hi2";
-import { ImHome3 } from "react-icons/im";
 import { RxCross2 } from "react-icons/rx";
 import { GrHome } from "react-icons/gr";
+import photo from "../../assets/house.jpeg";
 
-// Add a checked property to each utility
 const utilitiesData = [
   {
     name: "Utility name 1",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 2",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 3",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 1",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 2",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 3",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 1",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 2",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
   {
     name: "Utility name 3",
     price: "$20.00",
     validity: "Valid Feb 22 - 12 Feb 23",
-    image: "https://via.placeholder.com/50",
+    image: photo,
     checked: false,
   },
 ];
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -179,8 +175,8 @@ export default function Amenities({ setPrincing }) {
                   display: "flex",
                   alignItems: "center",
                   marginBottom: "10px",
-                  height: "50px",
-                  padding: "10px 15px",
+                  height: "45px",
+                  padding: "8px",
                   justifyContent: "space-between",
                   borderRadius: "8px",
                   border: "1px solid #E0E0E0",
@@ -200,12 +196,12 @@ export default function Amenities({ setPrincing }) {
                       width: "50px",
                       height: "50px",
                       borderRadius: "8px",
-                      marginRight: "20px",
+                      marginRight: "10px",
                     }}
                   />
                   <div
                     style={{
-                      height: "80%",
+                      height: "90%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",

@@ -1,5 +1,5 @@
-import { Box, Divider } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { Box } from "@mui/material";
+import React, {useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { RiDashboardFill, RiTeamLine } from "react-icons/ri";
 import { ImUserTie } from "react-icons/im";
@@ -10,7 +10,7 @@ import { HiCloudArrowUp } from "react-icons/hi2";
 import { PiNotepadFill } from "react-icons/pi";
 import { AiFillFolderOpen, AiFillMessage } from "react-icons/ai";
 
-function Sidebar({  }) {
+function Sidebar({ toggleSidebar }) {
   const [clickedIcon, setClickedIcon] = useState(2);
 
   const Icons = [
@@ -26,8 +26,6 @@ function Sidebar({  }) {
     { id: 10, icon: <AiFillMessage /> },
   ];
 
- 
-
 
   return (
     <Box className="Sidebar">
@@ -42,6 +40,7 @@ function Sidebar({  }) {
           width: "25px",
           borderRadius: "50px",
         }}
+        onClick={toggleSidebar}
       >
         <FaChevronRight />
       </Box>
@@ -53,7 +52,7 @@ function Sidebar({  }) {
             className={`sidebar-subicons ${
               clickedIcon === item.id ? "clicked" : ""
             }`}
-            onClick={() => setClickedIcon(item.id)}
+            onClick={() =>  setClickedIcon(item.id)}
           >
             {item.icon}
           </Box>
