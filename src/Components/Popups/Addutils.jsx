@@ -120,8 +120,8 @@ export default function AddUtility({ setPrincing }) {
       }}
     >
       <DialogContent>
-        <div className="mainover">
-          <div
+        <Box className="mainover">
+          <Box
             style={{
               color: "#091B29",
               fontWeight: "600",
@@ -133,9 +133,9 @@ export default function AddUtility({ setPrincing }) {
             <Box onClick={handleClose} style={{ cursor: "pointer" }}>
               <RxCross2 />
             </Box>
-          </div>
-          <div className="line" style={{ margin: "15px 0" }}></div>
-          <div
+          </Box>
+          <Box className="line" style={{ margin: "15px 0" }}></Box>
+          <Box
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -147,8 +147,8 @@ export default function AddUtility({ setPrincing }) {
               fontWeight: "bold",
             }}
           >
-            <div style={{ display: "flex", gap: "20px" }}>
-              <div
+            <Box style={{ display: "flex", gap: "20px" }}>
+              <Box
                 style={{
                   border: "1px solid #6DAFB3 ",
                   padding: "2px",
@@ -158,16 +158,16 @@ export default function AddUtility({ setPrincing }) {
                 }}
               >
                 <HiSparkles />
-              </div>
-              <div>05 Total Utility</div>
-            </div>
-            <div>
+              </Box>
+              <Box>05 Total Utility</Box>
+            </Box>
+            <Box>
               <h4>$200.00</h4>
-            </div>
-          </div>
+            </Box>
+          </Box>
 
-          <div className="lrtter">Available Utility</div>
-          <div
+          <Box className="lrtter">Available Utility</Box>
+          <Box
             style={{
               overflowY: "scroll",
               scrollbarWidth: "none",
@@ -175,20 +175,20 @@ export default function AddUtility({ setPrincing }) {
             }}
           >
             {utilities.map((utility, index) => (
-              <div
+              <Box
                 key={index}
                 style={{
                   display: "flex",
                   alignItems: "center",
                   marginBottom: "10px",
-                  height: "50px",
-                  padding: "10px 15px",
+                  height: "45px",
+                  padding: "8px",
                   justifyContent: "space-between",
                   borderRadius: "8px",
                   border: "1px solid #E0E0E0",
                 }}
               >
-                <div
+                <Box
                   style={{
                     display: "flex",
                     height: "100%",
@@ -197,6 +197,7 @@ export default function AddUtility({ setPrincing }) {
                 >
                   <img
                     src={utility.image}
+                    alt={utility.name}
                     style={{
                       width: "50px",
                       height: "50px",
@@ -204,28 +205,28 @@ export default function AddUtility({ setPrincing }) {
                       marginRight: "10px",
                     }}
                   />
-                  <div
+                  <Box
                     style={{
-                      height: "80%",
+                      height: "90%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div style={{ fontWeight: "600" }}>{utility.name}</div>
-                    <div style={{ color: "#808080", fontSize: "12px" }}>
+                    <Box style={{ fontWeight: "600" }}>{utility.name}</Box>
+                    <Box style={{ color: "#808080", fontSize: "12px" }}>
                       {utility.price} &ensp; {utility.validity}
-                    </div>
-                  </div>
-                </div>
+                    </Box>
+                  </Box>
+                </Box>
                 <Switch
                   checked={utility.checked} // Each switch's checked state
                   onChange={() => handleToggle(index)} // Toggle individual switch
                 />
-              </div>
+              </Box>
             ))}
-          </div>
-          <div style={{ padding: "16px", textAlign: "center" }}>
+          </Box>
+          <Box style={{ padding: "16px", textAlign: "center" }}>
             <Button
               variant="contained"
               color="primary"
@@ -234,8 +235,8 @@ export default function AddUtility({ setPrincing }) {
             >
               Update & Save
             </Button>
-          </div>
-        </div>
+          </Box>
+        </Box>
       </DialogContent>
     </Dialog>
   );

@@ -118,8 +118,8 @@ export default function Amenities({ setPrincing }) {
       }}
     >
       <DialogContent>
-        <div className="mainover">
-          <div
+        <Box className="mainover">
+          <Box
             style={{
               color: "#091B29",
               fontWeight: "600",
@@ -131,9 +131,9 @@ export default function Amenities({ setPrincing }) {
             <Box onClick={handleClose} style={{ cursor: "pointer" }}>
               <RxCross2 />
             </Box>
-          </div>
-          <div className="line" style={{ margin: "15px 0" }}></div>
-          <div
+          </Box>
+          <Box className="line" style={{ margin: "15px 0" }}></Box>
+          <Box
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -145,23 +145,23 @@ export default function Amenities({ setPrincing }) {
               fontWeight: "bold",
             }}
           >
-            <div style={{ display: "flex", gap: "20px" }}>
-              <div
+            <Box style={{ display: "flex", gap: "20px" }}>
+              <Box
                 style={{
                   fontSize:'20px'
                 }}
               >
                 <GrHome />
-              </div>
-              <div>05 Total Amenities</div>
-            </div>
-            <div>
+              </Box>
+              <Box>05 Total Amenities</Box>
+            </Box>
+            <Box>
               <h4>$200.00</h4>
-            </div>
-          </div>
+            </Box>
+          </Box>
 
-          <div className="lrtter">Available Amenitiesy</div>
-          <div
+          <Box className="lrtter">Available Amenitiesy</Box>
+          <Box
             style={{
               overflowY: "scroll",
               scrollbarWidth: "none",
@@ -169,7 +169,7 @@ export default function Amenities({ setPrincing }) {
             }}
           >
             {utilities.map((utility, index) => (
-              <div
+              <Box
                 key={index}
                 style={{
                   display: "flex",
@@ -182,7 +182,7 @@ export default function Amenities({ setPrincing }) {
                   border: "1px solid #E0E0E0",
                 }}
               >
-                <div
+                <Box
                   style={{
                     display: "flex",
                     height: "100%",
@@ -199,7 +199,7 @@ export default function Amenities({ setPrincing }) {
                       marginRight: "10px",
                     }}
                   />
-                  <div
+                  <Box
                     style={{
                       height: "90%",
                       display: "flex",
@@ -207,20 +207,20 @@ export default function Amenities({ setPrincing }) {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div style={{ fontWeight: "600" }}>{utility.name}</div>
-                    <div style={{ color: "#808080", fontSize: "12px" }}>
+                    <Box style={{ fontWeight: "600" }}>{utility.name}</Box>
+                    <Box style={{ color: "#808080", fontSize: "12px" }}>
                       {utility.price} &ensp; {utility.validity}
-                    </div>
-                  </div>
-                </div>
+                    </Box>
+                  </Box>
+                </Box>
                 <Switch
                   checked={utility.checked} // Each switch's checked state
                   onChange={() => handleToggle(index)} // Toggle individual switch
                 />
-              </div>
+              </Box>
             ))}
-          </div>
-          <div style={{ padding: "16px", textAlign: "center" }}>
+          </Box>
+          <Box style={{ padding: "16px", textAlign: "center" }}>
             <Button
               variant="contained"
               color="primary"
@@ -229,8 +229,8 @@ export default function Amenities({ setPrincing }) {
             >
               Update & Save
             </Button>
-          </div>
-        </div>
+          </Box>
+        </Box>
       </DialogContent>
     </Dialog>
   );

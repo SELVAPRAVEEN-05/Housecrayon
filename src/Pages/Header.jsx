@@ -13,9 +13,9 @@ export default function Header() {
         <Box className="H-logo">
           <img src={Logo} className="H-img" />
           <Divider orientation="vertical" flexItem className="H-hr" />
-          <div className="H-title">
+          <Box className="H-title">
             PROPERTY MANAGEMENT SOLUTION
-          </div>
+          </Box>
         </Box>
         <Box className="H-search-container">
           <input className="H-searchbar" placeholder="Search"></input>

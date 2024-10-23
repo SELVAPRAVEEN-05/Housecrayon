@@ -9,9 +9,8 @@ function App() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleSidebar = () => {
-    setIsExpanded((prevState) => !prevState);  //if ! is hear
+    setIsExpanded((prevState) => !prevState); 
   };
-
   return (
     <Box className="overall">
       <Grid container direction="column" sx={{ height: "100%" }}>

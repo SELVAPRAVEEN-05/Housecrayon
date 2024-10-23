@@ -12,7 +12,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Discount({ setPrincing }) {
+export default function Cardpopup({ setPrincing }) {
   const [open, setOpen] = useState(true);
 
   const handleClose = () => {
@@ -24,44 +24,37 @@ export default function Discount({ setPrincing }) {
     {
       billName: "Bill Name Here",
       price: "$1,000",
-      discountAmount: "100,000",
-      currency: "ADE",
+      discountAmount: "10%",
     },
     {
       billName: "Another Bill",
       price: "$1,500",
-      discountAmount: "200,000",
-      currency: "ADE",
+      discountAmount: "20%",
     },
     {
       billName: "Third Bill",
       price: "$1,200",
-      discountAmount: "50,000",
-      currency: "ADE",
+      discountAmount: "50%",
     },
     {
       billName: "Fourth Bill",
       price: "$2,000",
-      discountAmount: "150,000",
-      currency: "ADE",
+      discountAmount: "15%",
     },
     {
       billName: "Fifth Bill",
       price: "$2,500",
-      discountAmount: "120,000",
-      currency: "ADE",
+      discountAmount: "12%",
     },
     {
       billName: "Sixth Bill",
       price: "$3,000",
-      discountAmount: "80,000",
-      currency: "ADE",
+      discountAmount: "8%",
     },
     {
       billName: "Another Bill",
       price: "$1,500",
-      discountAmount: "200,000",
-      currency: "ADE",
+      discountAmount: "20%",
     },
   ];
 
@@ -96,23 +89,20 @@ export default function Discount({ setPrincing }) {
           <Box className="dicright">
             <Houseimg />
             <Box className="disprices">
-              <Box className="leftpricontainer">
+              <Box className="leftpricontainer" sx={{display:'flex'}}>
                 <Box className="pricesle">UNIT PRICE DETAIL</Box>
                 <Box className="methe">
                   {billDetails.map((detail, index) => (
-                    <Box sx={{ marginTop: "10px" }} key={index}>
+                    <Box sx={{ marginTop: "15px" }} key={index}>
                       <Box className="namerow">
                         <Box>{detail.billName}</Box>
                         <Box>{detail.price}</Box>
                       </Box>
                       <Box className="namerow" sx={{ color: "#98A0AC" ,fontSize:'12px'}}>
                         <Box>Discount</Box>
-                        <Box className="amature">
                           <Box sx={{ fontSize: "12px" }}>
                             {detail.discountAmount}
                           </Box>
-                          <Box>{detail.currency}</Box>
-                        </Box>
                       </Box>
                       <Divider orientation="horizontal" />
                     </Box>

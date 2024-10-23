@@ -9,7 +9,6 @@ function Secondary() {
   const [activeTab, setActiveTab] = useState("Lease");
   const [act, setact] = useState("Yes");
   const [act1, setact1] = useState("Amount");
-  const [progress, setProgress] = React.useState(0);
 
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -69,7 +68,7 @@ function Secondary() {
                 }}
               >
                 <MenuItem value="" disabled>
-                  Pricing Component
+                <Box className="blackda">Pricing Component</Box>
                 </MenuItem>
                 <MenuItem value={10}>GST 1</MenuItem>
                 <MenuItem value={20}>GST 2</MenuItem>
@@ -111,7 +110,7 @@ function Secondary() {
                 }}
               >
                 <MenuItem value="" disabled>
-                  GST
+                <Box className="blackda">GST</Box>
                 </MenuItem>
                 <MenuItem value={10}>GST 1</MenuItem>
                 <MenuItem value={20}>GST 2</MenuItem>

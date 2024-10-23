@@ -173,6 +173,7 @@
 .QuotationSummary {
   margin: 10px 15px 0 15px;
   font-weight: bold;
+  /* background-color: red; */
   color: #4e5a6b;
 }
 
@@ -407,10 +408,10 @@
   justify-content: space-between;
 }
 
-.pricing-bottom-input{
-  border: 1px solid #E4E8EE;
+.pricing-bottom-input {
+  border: 1px solid #e4e8ee;
   border-radius: 4px;
-  color: #091B29;
+  color: #091b29;
   background-color: white;
   padding: 0px 20px;
   height: 40px;
@@ -420,40 +421,39 @@
   display: flex;
   justify-content: space-between;
 }
-.pricing-bottom-top{
-  color: #98A0AC;
+.pricing-bottom-top {
+  color: #98a0ac;
   margin-top: 15px;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
 }
 
-
-.rating-buttons-main{
+.rating-buttons-main {
   display: flex;
   width: 100%;
   margin-top: 15px;
   justify-content: space-between;
 }
-.ratings-progress{
+.ratings-progress {
   height: 1px;
 }
 
-.ratings-button{
+.ratings-button {
   width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  color: #98A0AC;
+  color: #98a0ac;
   font-size: 12px;
   justify-content: space-between;
 }
 
-.ratings-rate{
+.ratings-rate {
   display: flex;
-  border: 1px solid #E4E8EE;
+  border: 1px solid #e4e8ee;
   border-radius: 4px;
-  color: #091B29;
+  color: #091b29;
   background-color: white;
   height: 40px;
   padding: 0 10px;
@@ -462,8 +462,6 @@
   font-size: 14px;
   font-weight: bold;
 }
-
-
 
 .item-number {
   font-size: 12px;
@@ -792,7 +790,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97%;
+  width: 80%;
   font-size: 14px;
   color: #ced3dd;
 }
@@ -854,4 +852,8 @@
   border-radius: 4px;
   font-size: 13px;
   background-color: rgb(255, 214, 214);
+}
+
+.blackda{
+  color: #292d31e2;
 }

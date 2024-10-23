@@ -1,6 +1,6 @@
 import React from "react";
 import phota from "../../assets/house.jpeg";
-import { PiSquareHalfBottomLight, PiBathtubLight } from "react-icons/pi"; // Importing PiBathtubLight
+import { PiSquareHalfBottomLight, PiBathtubLight } from "react-icons/pi";
 import { Box, Divider } from "@mui/material";
 import { RiBook2Line } from "react-icons/ri";
 import { BiBed } from "react-icons/bi";
@@ -41,13 +41,19 @@ function Houseimg() {
         <Box className="quantities">
           <BiBed />
           <Box className="naval">2</Box>
-
-          <PiBathtubLight /> {/* Correct reference */}
+          <Box className="dot">
+                    <Box className="indot"></Box>
+                  </Box>
+          <PiBathtubLight />
           <Box className="naval">2</Box>
-
+          <Box className="dot">
+                    <Box className="indot"></Box>
+                  </Box>
           <GoHome />
           <Box className="naval">3BHK</Box>
-
+          <Box className="dot">
+                    <Box className="indot"></Box>
+                  </Box>
           <PiSquareHalfBottomLight />
           <Box className="naval">2000</Box>
           <Box>Sq.Ft</Box>
